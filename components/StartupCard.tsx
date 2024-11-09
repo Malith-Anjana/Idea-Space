@@ -4,9 +4,12 @@ import {EyeIcon} from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import {Button} from "@/components/ui/button";
+import {Author, Startup} from "@/sanity/types";
 
-const StartupCard = ({post}: {post: StartupTypeCard}) => {
-    const { _createdAt, views, author: {_id: authorId, name}, title, category, _id, image, description} = post;
+export type StartupCardType = Omit<Startup, "author"> & {author?:Author}
+
+const StartupCard = ({post}: {post: StartupCardType}) => {
+    const { _createdAt, views, author, title, category, _id, image, description} = post;
     return (
         <li className="startup-card group">
             <div className="flex-between">
@@ -20,9 +23,9 @@ const StartupCard = ({post}: {post: StartupTypeCard}) => {
             </div>
             <div className="flex-between mt-5 gap-5">
                 <div className="flex-1">
-                    <Link href={`/user/${authorId}`}>
+                    <Link href={`/user/${author?.id}`}>
                         <p className="text-16-medium line-clamp-1">
-                            {name}
+                            {author?.name}
                         </p>
                     </Link>
                     <Link href={`/startup/${_id}`}>
@@ -31,7 +34,7 @@ const StartupCard = ({post}: {post: StartupTypeCard}) => {
                         </h3>
                     </Link>
                 </div>
-                <Link href={`/user/${authorId}`}>
+                <Link href={`/user/${author?.id}`}>
                     <Image src="https://placehold.co/48x48" alt="placeholder" height={48} width={48} className="rounded-full" />
                 </Link>
             </div>
@@ -42,7 +45,7 @@ const StartupCard = ({post}: {post: StartupTypeCard}) => {
 
                 <img src={image} alt="palceholder" className="startup-card_img" />
             <div className="flex-between gap-3 mt-5">
-                <Link href={`/query=${category.toLowerCase()}`}>
+                <Link href={`/query=${category?.toLowerCase()}`}>
                     <p className="text-16-medium">
                         {category}
                     </p>
