@@ -1486,15 +1486,6 @@
   resolved "https://registry.npmjs.org/@sanity/color/-/color-3.0.6.tgz"
   integrity sha512-2TjYEvOftD0v7ukx3Csdh9QIu44P2z7NDJtlC3qITJRYV36J7R6Vfd3trVhFnN77/7CZrGjqngrtohv8VqO5nw==
 
-"@sanity/comlink@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/@sanity/comlink/-/comlink-1.0.0.tgz"
-  integrity sha512-OwbT5C1j8wEVEvU78cYrC7l2l+cUH4UWHE4LF+FjniiQqeO+Udt6qK8akDRzsULmt3V2ebPOg+CYgRZh8Fkhdg==
-  dependencies:
-    rxjs "^7.8.1"
-    uuid "^10.0.0"
-    xstate "^5.18.2"
-
 "@sanity/comlink@1.1.1":
   version "1.1.1"
   resolved "https://registry.npmjs.org/@sanity/comlink/-/comlink-1.1.1.tgz"
@@ -1664,12 +1655,12 @@
     debug "^4.3.4"
     lodash "^4.17.21"
 
-"@sanity/next-loader@1.0.6":
-  version "1.0.6"
-  resolved "https://registry.npmjs.org/@sanity/next-loader/-/next-loader-1.0.6.tgz"
-  integrity sha512-VcLs/GSqcxQ9MCVtr5/QP9KJg/fuv8NqCp9jqRHvxRhhKlB67zvJzBiDGQ5U0+Sh0Q6HqHtbMNwnG7ohHCecrQ==
+"@sanity/next-loader@1.1.3":
+  version "1.1.3"
+  resolved "https://registry.npmjs.org/@sanity/next-loader/-/next-loader-1.1.3.tgz"
+  integrity sha512-Obu0VYwictaoKtFX9jG7VPS4oPP5ZUu+SkSwZPIz2spnJT8qB9L1bCJJgw4BaLfYtdEtIP1GFbrLvs5K7rZZwQ==
   dependencies:
-    "@sanity/comlink" "1.0.0"
+    "@sanity/comlink" "1.1.1"
     use-effect-event "^1.0.2"
 
 "@sanity/presentation@1.17.8":
@@ -1695,25 +1686,32 @@
     suspend-react "0.1.3"
     use-effect-event "^1.0.2"
 
-"@sanity/preview-kit-compat@1.5.11":
-  version "1.5.11"
-  resolved "https://registry.npmjs.org/@sanity/preview-kit-compat/-/preview-kit-compat-1.5.11.tgz"
-  integrity sha512-I0u258jfLwuVRsNlJ+9qjqRK4S9IH1mh2KW9TzMjSmxd9RlaCC9IfOWOzB1PL/0Ym/BQhzwlLEv17pfRrb53VA==
+"@sanity/preview-kit-compat@1.5.17":
+  version "1.5.17"
+  resolved "https://registry.npmjs.org/@sanity/preview-kit-compat/-/preview-kit-compat-1.5.17.tgz"
+  integrity sha512-c8Xzo6Nk1zeRk6xO3u6t0g0EwCL0Tp4cyCE68gg5aWryWhalLyde4aY27EvZznyoSJF3JCb8ohbwVwALORaBog==
   dependencies:
-    "@sanity/comlink" "1.0.0"
+    "@sanity/comlink" "1.1.1"
 
-"@sanity/preview-kit@5.1.8":
-  version "5.1.8"
-  resolved "https://registry.npmjs.org/@sanity/preview-kit/-/preview-kit-5.1.8.tgz"
-  integrity sha512-x0mHOCfniM3gZMyLjlqrH6kkFxDZYBJRXCW7FJLZykLei1G4tjcExv7ByJ/v5+eePpfY7J8y8trmDgew33a1GQ==
+"@sanity/preview-kit@5.1.14":
+  version "5.1.14"
+  resolved "https://registry.npmjs.org/@sanity/preview-kit/-/preview-kit-5.1.14.tgz"
+  integrity sha512-fHFux0MWkPKSiu5yVbchUsXKeACQxrueXgequB8LtP/1+Tji6soNus3UKKeTccMs+4ppsNGBskKhoxnCtugx1g==
   dependencies:
-    "@sanity/preview-kit-compat" "1.5.11"
+    "@sanity/preview-kit-compat" "1.5.17"
     mendoza "3.0.7"
 
 "@sanity/preview-url-secret@2.0.0":
   version "2.0.0"
   resolved "https://registry.npmjs.org/@sanity/preview-url-secret/-/preview-url-secret-2.0.0.tgz"
   integrity sha512-JfStdSb8KT0RzePtGbUIZewNNHNNbvYHwsW4WzYEmgPTfgZnPAIMFYUFSHAKKFyKQ3tqzARRQm3uURpoSTyIkA==
+  dependencies:
+    "@sanity/uuid" "3.0.2"
+
+"@sanity/preview-url-secret@2.0.1":
+  version "2.0.1"
+  resolved "https://registry.npmjs.org/@sanity/preview-url-secret/-/preview-url-secret-2.0.1.tgz"
+  integrity sha512-faUejxyNhGJ1R+qCfVb2CL8gQA1ztmpo5rwf23rYfVhdTAi2BxdL12OKhu/oCSh0WHC9ttEFtCp7s18Mj+0+lA==
   dependencies:
     "@sanity/uuid" "3.0.2"
 
@@ -1826,15 +1824,16 @@
     lodash "^4.17.21"
     quick-lru "^5.1.1"
 
-"@sanity/visual-editing@2.3.0":
-  version "2.3.0"
-  resolved "https://registry.npmjs.org/@sanity/visual-editing/-/visual-editing-2.3.0.tgz"
-  integrity sha512-e0C1EqmRgEXRJwrUcvq0Q/RvmHBCAo4h8qdkWQXbsgWPBl1d+veyYqlRZOESEGvAhaw7xcrOXG2BaJgUPqK5ow==
+"@sanity/visual-editing@2.5.1":
+  version "2.5.1"
+  resolved "https://registry.npmjs.org/@sanity/visual-editing/-/visual-editing-2.5.1.tgz"
+  integrity sha512-jzU//xgooJfGklEIfN6bijpH5oWVfiZeSiljKeAvQADvXlPzcnW7IlwikaW/dDvrJmS/lxlp1DMuMpEB4/07SA==
   dependencies:
-    "@sanity/comlink" "1.0.0"
+    "@sanity/comlink" "1.1.1"
     "@sanity/mutate" "0.10.1-canary.5"
-    "@sanity/preview-url-secret" "2.0.0"
+    "@sanity/preview-url-secret" "2.0.1"
     "@vercel/stega" "0.1.2"
+    get-random-values-esm "^1.0.2"
     rxjs "^7.8.1"
     scroll-into-view-if-needed "^3.1.0"
     use-effect-event "^1.0.2"
@@ -4322,7 +4321,7 @@ get-it@^8.4.21, get-it@^8.6.2, get-it@^8.6.5:
     progress-stream "^2.0.0"
     tunnel-agent "^0.6.0"
 
-get-random-values-esm@1.0.2:
+get-random-values-esm@^1.0.2, get-random-values-esm@1.0.2:
   version "1.0.2"
   resolved "https://registry.npmjs.org/get-random-values-esm/-/get-random-values-esm-1.0.2.tgz"
   integrity sha512-HMSDTgj1HPFAuZG0FqxzHbYt5JeEGDUeT9r1RLXhS6RZQS8rLRjokgjZ0Pd28CN0lhXlRwfH6eviZqZEJ2kIoA==
@@ -4514,7 +4513,7 @@ groq-js@^1.14.0:
   dependencies:
     debug "^4.3.4"
 
-groq@^3.62.0, groq@3.63.0:
+groq@^3.63.0, groq@3.63.0:
   version "3.63.0"
   resolved "https://registry.npmjs.org/groq/-/groq-3.63.0.tgz"
   integrity sha512-9YzXsNTXqRFput/5HoRS7HJKl5J6of21qpc89ZnzDC/LcQPI1UzpRSuJ6AHYPzj1Re9nGRYtr88uwJsBjS4aLw==
@@ -5649,18 +5648,18 @@ next-auth@^5.0.0-beta.25:
   dependencies:
     "@auth/core" "0.37.2"
 
-next-sanity@^9.8.3-canary.1:
-  version "9.8.3-canary.1"
-  resolved "https://registry.npmjs.org/next-sanity/-/next-sanity-9.8.3-canary.1.tgz"
-  integrity sha512-A68pwMNLABTxhx9Nkf4STH5+OtwMeQxIQ0DsGsHT+v3oIy5jYLl5PvdaIC43XRH5NMSVBvxLUS4oKK61x/YAQw==
+next-sanity@^9.8.10:
+  version "9.8.10"
+  resolved "https://registry.npmjs.org/next-sanity/-/next-sanity-9.8.10.tgz"
+  integrity sha512-yzxSuQeMToq59SJiAEcPYnSwrVY1x6GMB7qiOhvO/yw9RYs3hgPyxBBcPjMoYsPYDHcU9n2+r59SAJaJGd6/Qg==
   dependencies:
     "@portabletext/react" "^3.1.0"
-    "@sanity/client" "^6.22.2"
-    "@sanity/next-loader" "1.0.6"
-    "@sanity/preview-kit" "5.1.8"
-    "@sanity/preview-url-secret" "2.0.0"
-    "@sanity/visual-editing" "2.3.0"
-    groq "^3.62.0"
+    "@sanity/client" "^6.22.3"
+    "@sanity/next-loader" "1.1.3"
+    "@sanity/preview-kit" "5.1.14"
+    "@sanity/preview-url-secret" "2.0.1"
+    "@sanity/visual-editing" "2.5.1"
+    groq "^3.63.0"
     history "^5.3.0"
 
 next@15.0.2:
@@ -7088,6 +7087,11 @@ semver@^7.3.4, semver@^7.3.5, semver@^7.6.0, semver@^7.6.3:
   version "5.7.2"
   resolved "https://registry.npmjs.org/semver/-/semver-5.7.2.tgz"
   integrity sha512-cBznnQ9KjJqU67B52RMC65CMarK2600WFnbkcaiwWq3xy/5haFJlshgnpjovMVJ+Hff49d8GEn0b87C5pDQ10g==
+
+server-only@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.npmjs.org/server-only/-/server-only-0.0.1.tgz"
+  integrity sha512-qepMx2JxAa5jjfzxG79yPPq+8BuFToHd1hm7kI+Z4zAq1ftQiP7HcxMhDDItrbtwVeLg/cY2JnKnrcFkmiswNA==
 
 set-function-length@^1.2.1:
   version "1.2.2"
